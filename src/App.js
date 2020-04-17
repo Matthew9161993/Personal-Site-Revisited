@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import GenericText from './GenericText.js';
+import GenericPicture from './GenericPicture.js'
+import SAMPLETEXT from './SampleText.js';
+import MATTOCONNOR from './MattOConnor.jpg'
 
 function App() {
   return (
@@ -18,6 +22,8 @@ function App() {
         >
           Learn React
         </a>
+        <GenericText text={SAMPLETEXT} />
+        <GenericPicture file={MATTOCONNOR} description="Matt O'Connor" width="250px" height="750px" />
       </header>
     </div>
   );

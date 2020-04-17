@@ -11,6 +11,12 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .Generic-picture {
+    animation: App-logo-spin infinite 20s linear;
+  }
+  .Generic-text {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
@@ -35,4 +41,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Generic-picture {
+  border: 5px solid #116466;
+  border-radius: 45%;
+  height:100%;
+  overflow: hidden;
+}
+
+.Generic-portrait {
+  display: block;
+  height: 30vh;
+  padding: 20px;
+  text-align: center;
+  width: 30vw;
+}
+
+.Generic-text {
+  background-color: #2C3531;
+  border: 5px solid #116466;
+  border-radius: 25px;
+  color: #FFCB9A;
+  font-family: Roboto Slab;
+  padding: 5px;
 }
