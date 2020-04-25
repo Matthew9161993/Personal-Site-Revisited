@@ -2,11 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import GenericText from './GenericText.js';
-import GenericPicture from './GenericPicture.js'
+import GenericPicture from './GenericPicture.js';
+import GridView from './GridView.js';
 import SAMPLETEXT from './SampleText.js';
-import MATTOCONNOR from './MattOConnor.jpg'
+import MATTOCONNOR from './MattOConnor.jpg';
 
 function App() {
+  const textbox = <GenericText text={SAMPLETEXT} />;
+  const picturebox = <GenericPicture file={MATTOCONNOR} description="Matt O'Connor" />
+
+  const textarray = [picturebox, textbox, textbox, textbox, textbox, textbox, textbox];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,8 +28,7 @@ function App() {
         >
           Learn React
         </a>
-        <GenericText text={SAMPLETEXT} />
-        <GenericPicture file={MATTOCONNOR} description="Matt O'Connor" width="250px" height="750px" />
+        <GridView data = {textarray}/>
       </header>
     </div>
   );
