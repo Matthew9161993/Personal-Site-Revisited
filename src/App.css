@@ -1,74 +1,62 @@
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-image: url("/netcatbackground.png");
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .Generic-picture {
-  border: 5px solid #116466;
+  border: 5px solid #FFCB9A;
   border-radius: 45%;
+  box-shadow: 5px 5px 10px #D9B08C;
   height: calc(100% - 10px);
-  overflow: hidden;
 }
 
 .Generic-portrait {
   display: block;
   height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2px;
-  text-align: center;
   width: 30vw;
 }
 
 .Generic-text {
   background-color: #2C3531;
-  border: 5px solid #116466;
+  border: 5px solid #FFCB9A;
   border-radius: 25px;
-  color: #FFCB9A;
+  box-shadow: 5px 5px 10px #D9B08C;
+  color: #D1E8E2;
   font-family: Roboto Slab;
-  height: calc(100% - 10px);
-  position: relative;
+  font-size: 18px;
 }
 
 .Generic-text p {
-  vertical-align: middle;
+  margin: 20px;
 }
 
 .Grid-wrapper {
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(200px, auto);
-  grid-gap: 25px;
+  grid-gap: 20px;
+  margin: 10px;
+}
+
+.Scroll-container {
+  position: fixed;
+  top: 10%;
+  left: 1.5%;
+  width: 15vw;
+  height: 30vh;
+  overflow: scroll;
+}
+
+.Scroll-segment {
 }
