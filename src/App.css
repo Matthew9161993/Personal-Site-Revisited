@@ -7,6 +7,7 @@
 
 .App-header {
   min-height: 30vh;
+  background-image: url(/netcatbackground.png);
   display: flex;
 }
 

@@ -1,16 +1,35 @@
 import React from 'react';
 import './App.css';
 
-
-// This class does not support all components yet, but it is allowed!
-
 class Scroller extends React.Component {
+
+	constructor(props) {
+	  super(props);
+	  this.state = { 
+	  	icons: [] ,
+	  	position: []
+	  };
+
+	  // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick() {
+		console.log("hi");
+	}
+
 	render() {
+		if (this.props.position != null) {
+			console.log(this.props.position[0]);
+		} 
+		else {
+			console.log("position is null");
+		}
 		return (
 			<div className= "Scroll-container">
-			  <div className= "Scroll-segment"> {this.props.first} </div>
-			  <div className= "Scroll-segment"> {this.props.second} </div>
-			  <div className= "Scroll-segment"> {this.props.third} </div>
+			  {(this.props.icons || []).map((item, index) => (
+					<div className= "Scroll-segment" key={index} onClick={this.handleClick}>{item}</div>
+				))}
 			</div>
 		);
 	}
