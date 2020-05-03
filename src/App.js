@@ -19,11 +19,10 @@ function App() {
 
   return (
       <div className="App">
+        <Scroller first = {smallText} second = {smallText} third = {smallText}/>
         <header className="App-header">
-          <Scroller first = {picturebox} second = {smallText} third = {smallText}/>
-          <div className="Background-image"> </div>
-          <GridView data = {textarray}/>
         </header>
+        <GridView data = {textarray}/>
       </div>
   );
 }
