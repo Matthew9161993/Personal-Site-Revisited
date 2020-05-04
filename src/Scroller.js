@@ -14,8 +14,23 @@ class Scroller extends React.Component {
     this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick() {
-		console.log("hi");
+	handleClick(index) {
+
+		if (this.props.position[index] == null) {
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: 'smooth'
+			});
+		}
+		else { 
+			window.scrollTo({
+				top: this.props.position[index],
+				left: 0,
+				behavior: 'smooth'
+			});
+		}
+		
 	}
 
 	render() {
@@ -28,7 +43,7 @@ class Scroller extends React.Component {
 		return (
 			<div className= "Scroll-container">
 			  {(this.props.icons || []).map((item, index) => (
-					<div className= "Scroll-segment" key={index} onClick={this.handleClick}>{item}</div>
+					<div className= "Scroll-segment" key={index} onClick={(e) => this.handleClick(index, e)}>{item}</div>
 				))}
 			</div>
 		);

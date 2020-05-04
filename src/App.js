@@ -16,7 +16,7 @@ function App() {
   const picturebox = <GenericPicture file={MATTOCONNOR} description="Matt O'Connor" />
 
   const textarray = [picturebox, smallText, bigText, smallText, bigText, smallText, smallText];
-  const positions = [10, 20]
+  const positions = [0, 300, 1300];
   
   return (
       <div className="App">
