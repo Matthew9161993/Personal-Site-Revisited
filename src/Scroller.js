@@ -5,13 +5,12 @@ class Scroller extends React.Component {
 
 	constructor(props) {
 	  super(props);
-	  this.state = { 
-	  	icons: [] ,
-	  	position: []
-	  };
 
 	  // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
+	}
+
+	componentDidMount() {
 	}
 
 	handleClick(index) {
@@ -30,16 +29,11 @@ class Scroller extends React.Component {
 				behavior: 'smooth'
 			});
 		}
-		
+
 	}
 
 	render() {
-		if (this.props.position != null) {
-			console.log(this.props.position[0]);
-		} 
-		else {
-			console.log("position is null");
-		}
+
 		return (
 			<div className= "Scroll-container">
 			  {(this.props.icons || []).map((item, index) => (
@@ -47,6 +41,7 @@ class Scroller extends React.Component {
 				))}
 			</div>
 		);
+
 	}
 }
 

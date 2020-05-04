@@ -16,11 +16,12 @@ function App() {
   const picturebox = <GenericPicture file={MATTOCONNOR} description="Matt O'Connor" />
 
   const textarray = [picturebox, smallText, bigText, smallText, bigText, smallText, smallText];
+  const testarray = [smallText, smallText, smallText];
   const positions = [0, 300, 1300];
   
   return (
       <div className="App">
-        <Scroller icons= {textarray} position={positions}/>
+        <Scroller icons= {testarray} position={positions}/>
         <header className="App-header">
         </header>
         <GridView data = {textarray}/>

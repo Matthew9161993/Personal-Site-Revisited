@@ -3,13 +3,6 @@ import './App.css';
 
 class GridView extends React.Component {
 
-  constructor(props) {
-	  super(props);
-	  this.state = { 
-	  	data: []
-	  };
-	}
-
   render() {
     return (
 			<div className="Grid-wrapper">
