@@ -5,12 +5,13 @@ class Scroller extends React.Component {
 
 	constructor(props) {
 	  super(props);
-
+	  this.myFirstRef = React.createRef();
 	  // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
 	}
 
 	componentDidMount() {
+		console.log(this.myFirstRef);
 	}
 
 	handleClick(index) {
@@ -35,7 +36,7 @@ class Scroller extends React.Component {
 	render() {
 
 		return (
-			<div className= "Scroll-container">
+			<div className= "Scroll-container" ref={this.myRef}>
 			  {(this.props.icons || []).map((item, index) => (
 					<div className= "Scroll-segment" key={index} onClick={(e) => this.handleClick(index, e)}>{item}</div>
 				))}
