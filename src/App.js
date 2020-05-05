@@ -17,7 +17,7 @@ function App() {
 
   const textarray = [picturebox, smallText, bigText, smallText, bigText, smallText, smallText];
   const testarray = [smallText, smallText, smallText];
-  const positions = [0, 300, 1300];
+  const positions = [0, 300];
   
   return (
       <div className="App">

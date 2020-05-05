@@ -55,10 +55,15 @@
   width: 300px;
   height: 300px;
   transition: left .5s;
+  transition-delay: .5s;
 }
 
-.Scroll-container:hover, .Scroll-container:focus {
+.Scroll-container:hover, .Scroll-container:focus, .Scroll-container.Initializing {
   left: 0px;
+  transition-delay: 0s;
+}
+
+.Scroll-container:not(:hover) {
 }
 
 .Scroll-segment div{

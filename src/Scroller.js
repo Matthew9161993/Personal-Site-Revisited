@@ -5,23 +5,20 @@ class Scroller extends React.Component {
 
 	constructor(props) {
 	  super(props);
-	  this.myFirstRef = React.createRef();
+	  this.state = {
+	  	initialFocus: true
+	  }
 	  // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
 	}
 
 	componentDidMount() {
-		console.log(this.myFirstRef);
+		setTimeout(() => {this.setState({initialFocus: false})}, 3000);
 	}
 
 	handleClick(index) {
 
-		if (this.props.position[index] == null) {
-			window.scrollTo({
-				top: 0,
-				left: 0,
-				behavior: 'smooth'
-			});
+		if (this.props.position[index] === undefined) {
 		}
 		else { 
 			window.scrollTo({
@@ -36,7 +33,7 @@ class Scroller extends React.Component {
 	render() {
 
 		return (
-			<div className= "Scroll-container" ref={this.myRef}>
+			<div className={`Scroll-container ${this.state.initialFocus ? "Initializing" : ""}`}>
 			  {(this.props.icons || []).map((item, index) => (
 					<div className= "Scroll-segment" key={index} onClick={(e) => this.handleClick(index, e)}>{item}</div>
 				))}
