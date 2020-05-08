@@ -6,9 +6,22 @@
 }
 
 .App-header {
-  min-height: 30vh;
+  min-height: 150px;
+  filter: blur(1px);
+  position: relative;
+}
+
+.Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
   background-image: url(/netcatbackground.png);
-  display: flex;
+  background-size: 100% 100%;
+  filter: blur(3px);
+  z-index: -1;
 }
 
 .Generic-picture {
@@ -63,10 +76,17 @@
   transition-delay: 0s;
 }
 
-.Scroll-container:not(:hover) {
-}
-
 .Scroll-segment div{
   border: 5px solid #116466;
   box-shadow: none;
 }
+
+.Split-box {
+  background-image: radial-gradient(#116466, transparent, transparent);
+  display: flex;
+  float: right;
+}
+
+
+
+

@@ -20,7 +20,8 @@ class Scroller extends React.Component {
 
 		if (this.props.position[index] === undefined) {
 		}
-		else { 
+		else {
+			console.log(this.props.position[index]);
 			window.scrollTo({
 				top: this.props.position[index],
 				left: 0,
@@ -35,7 +36,14 @@ class Scroller extends React.Component {
 		return (
 			<div className={`Scroll-container ${this.state.initialFocus ? "Initializing" : ""}`}>
 			  {(this.props.icons || []).map((item, index) => (
-					<div className= "Scroll-segment" key={index} onClick={(e) => this.handleClick(index, e)}>{item}</div>
+					<div className= "Scroll-segment" 
+							 key={index}
+							 onClick={(e) =>
+							 	 this.handleClick(index, e)
+							 }
+					>
+					{item}
+					</div>
 				))}
 			</div>
 		);
