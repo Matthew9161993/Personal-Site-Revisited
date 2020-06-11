@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ContactButton from './ContactButton.js';
 import GenericText from './GenericText.js';
 import GenericPicture from './GenericPicture.js';
 import GridView from './GridView.js';
@@ -35,6 +36,7 @@ function App() {
         <header className="App-header">
           <div className="Background" />
         </header>
+        <ContactButton link='https://www.facebook.com/profile.php?id=100006827449201' picture= 'Facebook.png' hoverPicture= 'FacebookHover.png' text='Facebook Link' />
         <GridView data = {finalProjectArray}/>
         <Scroller icons= {testarray} position={positions}/>
       </div>
