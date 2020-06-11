@@ -5,7 +5,7 @@ class GenericText extends React.Component {
 	render() {
 		return (
 			<div className="Generic-text">
-			  <p>OH! {this.props.text}</p>
+			  <p>{this.props.text}</p>
 			</div>
 		);
 	}

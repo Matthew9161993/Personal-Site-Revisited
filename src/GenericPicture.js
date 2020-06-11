@@ -5,7 +5,9 @@ class GenericPicture extends React.Component {
 	render() {
 		return (
 			<div className= "Generic-portrait">
-			  <img className= "Generic-picture" src={this.props.file} alt={this.props.description} />
+				<a href = {this.props.link} target="_blank">
+			  	<img className= "Generic-picture" src={this.props.file} alt={this.props.description} />
+				</a>
 			</div>
 		);
 	}

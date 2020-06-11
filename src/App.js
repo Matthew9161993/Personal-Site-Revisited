@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import GenericText from './GenericText.js';
 import GenericPicture from './GenericPicture.js';
@@ -9,6 +8,8 @@ import SplitBox from './SplitBox.js';
 import SAMPLETEXT from './SampleText.js';
 import LOREMIPSUM from './LoremIpsum.js';
 import MATTOCONNOR from './MattOConnor.jpg';
+import SARAPROJECT from './STAWProject.js';
+import WEBSITEPROJECT from './personalSite.js';
 
 function App() {
 
@@ -19,13 +20,22 @@ function App() {
   const textarray = [splitbox, smallText, bigText, picturebox, bigText, smallText, smallText];
   const testarray = [smallText, smallText, smallText];
   const positions = [0, 150, 700];
+
+  console.log(SARAPROJECT.picture);
+
+  const finalProjectArray = [
+    <SplitBox text={<GenericText text={SARAPROJECT.description}/>} 
+      pic={<GenericPicture file={SARAPROJECT.picture} description="Sara Takes A Walk" link={SARAPROJECT.link} />} />,
+    <SplitBox text={<GenericText text={WEBSITEPROJECT.description}/>} 
+      pic={<GenericPicture file={WEBSITEPROJECT.picture} description="Personal Website" link={WEBSITEPROJECT.link} />} />
+  ];
   
   return (
       <div className="App">
         <header className="App-header">
           <div className="Background" />
         </header>
-        <GridView data = {textarray}/>
+        <GridView data = {finalProjectArray}/>
         <Scroller icons= {testarray} position={positions}/>
       </div>
   );
